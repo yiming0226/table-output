@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Output & Processing</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h2>Table 1</h2>
+    <table>
+        <tr>
+            <th>Index #</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>A1</td>
+            <td id="A1">41</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td id="A2">18</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td id="A3">21</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td id="A4">63</td>
+        </tr>
+        <tr>
+            <td>A5</td>
+            <td id="A5">2</td>
+        </tr>
+        <tr>
+            <td>A6</td>
+            <td id="A6">53</td>
+        </tr>
+        <tr>
+            <td>A7</td>
+            <td id="A7">5</td>
+        </tr>
+        <tr>
+            <td>A8</td>
+            <td id="A8">57</td>
+        </tr>
+        <tr>
+            <td>A9</td>
+            <td id="A9">60</td>
+        </tr>
+        <tr>
+            <td>A10</td>
+            <td id="A10">93</td>
+        </tr>
+        <tr>
+            <td>A11</td>
+            <td id="A11">28</td>
+        </tr>
+        <tr>
+            <td>A12</td>
+            <td id="A12">3</td>
+        </tr>
+        <tr>
+            <td>A13</td>
+            <td id="A13">90</td>
+        </tr>
+        <tr>
+            <td>A14</td>
+            <td id="A14">39</td>
+        </tr>
+        <tr>
+            <td>A15</td>
+            <td id="A15">80</td>
+        </tr>
+        <tr>
+            <td>A16</td>
+            <td id="A16">88</td>
+        </tr>
+        <tr>
+            <td>A17</td>
+            <td id="A17">49</td>
+        </tr>
+        <tr>
+            <td>A18</td>
+            <td id="A18">60</td>
+        </tr>
+        <tr>
+            <td>A19</td>
+            <td id="A19">26</td>
+        </tr>
+        <tr>
+            <td>A20</td>
+            <td id="A20">28</td>
+        </tr>
+    </table>
+
+    <h2>Table 2</h2>
+    <table id="table2">
+        <tr>
+            <th>Category</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Alpha</td>
+            <td id="Alpha"></td>
+        </tr>
+        <tr>
+            <td>Beta</td>
+            <td id="Beta"></td>
+        </tr>
+        <tr>
+            <td>Charlie</td>
+            <td id="Charlie"></td>
+        </tr>
+    </table>
+
+    <script>
+        function calculateTable2() {
+            const A5 = parseInt(document.getElementById("A5").textContent);
+            const A20 = parseInt(document.getElementById("A20").textContent);
+            const A15 = parseInt(document.getElementById("A15").textContent);
+            const A7 = parseInt(document.getElementById("A7").textContent);
+            const A13 = parseInt(document.getElementById("A13").textContent);
+            const A12 = parseInt(document.getElementById("A12").textContent);
+
+            const alpha = A5 + A20;
+            const beta = (A15 / A7).toFixed(0);
+            const charlie = A13 * A12;
+
+            document.getElementById("Alpha").textContent = alpha;
+            document.getElementById("Beta").textContent = beta;
+            document.getElementById("Charlie").textContent = charlie;
+        }
+
+        window.onload = calculateTable2;
+    </script>
+</body>
+</html>
